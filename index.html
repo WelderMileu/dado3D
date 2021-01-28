@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dado 3D</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.9/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.9/swiper-bundle.css">
+		<style>
+			body {
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.container {
+				position: absolute;
+				top: 20%;
+				width: 300px;
+				height: 300px;
+			}
+
+			.container div > div {
+				width: 300px;
+				height: 300px;
+			}
+
+			.container div > div:nth-child(1) { 
+				background: url(https://blog.emania.com.br/wp-content/uploads/2016/02/direitos-autorais-e-de-imagem.jpg);
+				background-size: cover;
+				background-position: center;  
+			}
+			.container div > div:nth-child(2) { 
+				background: url(https://rondoniaqui.com.br/wp-content/uploads/2018/08/fotografia.jpg);
+				background-size: cover;
+				background-position: center;  
+			}
+			.container div > div:nth-child(3) { 
+				background: url(https://www.amigododesigner.com.br/wp-content/uploads/2018/10/night-1927265_960_720.jpg);
+				background-size: cover;
+				background-position: center;  
+			}
+			.container div > div:nth-child(4) { 
+				background: url(https://www.nit.pt/wp-content/uploads/2019/01/90746c062f9e20f6c1287e0c77235e43.jpg);
+				background-size: cover;
+				background-position: center; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+			</div>
+			<div class="swiper-pagination" style="top: 400px !important;"></div>
+		</div>
+
+		<script>
+			const swiper = new Swiper('.container',{
+				effect: 'cube',
+				gradCursor: true,
+				cubeEffect : {
+					slideShadows: true,
+					shadow: true,
+					shadowOffset: 20,
+					shadowScale: 0.94
+				},
+				pagination: {
+					el: '.swiper-pagination'
+				}
+			});
+			
+		</script>
+	</body>
+</html>
